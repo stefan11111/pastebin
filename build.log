@@ -1,0 +1,268 @@
+[32m * [39;49;00mPackage:    media-gfx/feh-3.9.1:0
+[32m * [39;49;00mRepository: gentoo
+[32m * [39;49;00mMaintainer: slashbeast@gentoo.org
+[32m * [39;49;00mUSE:        abi_x86_64 amd64 elibc_glibc kernel_linux userland_GNU
+[32m * [39;49;00mFEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+>>> Unpacking source...
+>>> Unpacking feh-3.9.1.tar.bz2 to /var/tmp/portage/media-gfx/feh-3.9.1/work
+>>> Source unpacked in /var/tmp/portage/media-gfx/feh-3.9.1/work
+>>> Preparing source in /var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1 ...
+ [32m*[0m Applying feh-3.2-debug-cflags.patch ...
+[A[123C [34;01m[ [32;01mok[34;01m ][0m
+>>> Source prepared.
+>>> Configuring source in /var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1 ...
+>>> Source configured.
+>>> Compiling source in /var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1 ...
+make -j4 PREFIX=/usr doc_dir=${main_dir}/share/doc/feh-3.9.1 example_dir=${main_dir}/share/doc/feh-3.9.1/examples curl=0 debug=0 xinerama=0 exif=0 inotify=0 
+make[1]: Entering directory '/var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1/src'
+make[1]: Entering directory '/var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1/man'
+make[1]: Entering directory '/var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1/share/applications'
+sed \
+-e 's/\$VERSION\$/3.9.1/g' \
+-e 's/\$DATE\$/'"$(date '+%B %d, %Y')"/g \
+-e 's/\$MAN_CURL\$/disabled/' \
+-e 's/\$MAN_DEBUG\$/./' \
+-e 's/\$MAN_EXIF\$/not available/' \
+-e 's/\$MAN_XINERAMA\$/disabled/' \
+-e 's:\$IMAGEDIR\$:/usr/share/feh/images:' \
+< feh.pre > feh.desktop
+sed \
+-e 's/\$VERSION\$/3.9.1/g' \
+-e 's/\$DATE\$/August 22, 2022/g' \
+-e 's/\$MAN_CURL\$/disabled/' \
+-e 's/\$MAN_DEBUG\$/./' \
+-e 's/\$MAN_EXIF\$/not available/' \
+-e 's/\$MAN_INOTIFY\$/disabled/' \
+-e 's/\$MAN_MAGIC\$/disabled/' \
+-e 's/\$MAN_XINERAMA\$/disabled/' \
+< feh.pre > feh.1
+sed 's/^\(.*\)$/"\1\\n"/' < help.raw > help.inc
+make[1]: Leaving directory '/var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1/share/applications'
+make[1]: Leaving directory '/var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1/man'
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -MM events.c feh_png.c filelist.c gib_hash.c gib_imlib.c gib_list.c gib_style.c imlib.c index.c keyevents.c list.c main.c md5.c menu.c multiwindow.c options.c signals.c slideshow.c thumbnail.c timers.c utils.c wallpaper.c winwidget.c > deps.mk
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o events.o events.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o feh_png.o feh_png.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o filelist.o filelist.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o gib_hash.o gib_hash.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o gib_imlib.o gib_imlib.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o gib_list.o gib_list.c
+[01m[Kfilelist.c:[m[K In function '[01m[Kfeh_http_unescape[m[K':
+[01m[Kfilelist.c:700:31:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Kurl[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  700 | char *feh_http_unescape([01;35m[Kchar *url[m[K)
+      |                         [01;35m[K~~~~~~^~~[m[K
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o gib_style.o gib_style.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o imlib.o imlib.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o index.o index.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o keyevents.o keyevents.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o list.o list.c
+[01m[Kkeyevents.c:[m[K In function '[01m[Kfeh_event_handle_generic[m[K':
+[01m[Kkeyevents.c:427:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kcurr_screen[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  427 |         int [01;35m[Kcurr_screen[m[K = 0;
+      |             [01;35m[K^~~~~~~~~~~[m[K
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o main.o main.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o md5.o md5.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o menu.o menu.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o multiwindow.o multiwindow.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o options.o options.c
+[01m[Kmenu.c:[m[K In function '[01m[Kfeh_menu_cb_opt_fullscreen[m[K':
+[01m[Kmenu.c:1169:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kcurr_screen[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1169 |         int [01;35m[Kcurr_screen[m[K = 0;
+      |             [01;35m[K^~~~~~~~~~~[m[K
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o signals.o signals.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o slideshow.o slideshow.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o thumbnail.o thumbnail.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o timers.o timers.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o utils.o utils.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o wallpaper.o wallpaper.c
+x86_64-pc-linux-gnu-gcc -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\"   -c -o winwidget.o winwidget.c
+[01m[Kwallpaper.c:[m[K In function '[01m[Kfeh_wm_set_bg[m[K':
+[01m[Kwallpaper.c:423:29:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ki[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  423 |                 int format, [01;35m[Ki[m[K;
+      |                             [01;35m[K^[m[K
+[01m[Kwinwidget.c:[m[K In function '[01m[Kwinwidget_resize[m[K':
+[01m[Kwinwidget.c:894:22:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kdu[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  894 |         unsigned int [01;35m[Kdu[m[K;
+      |                      [01;35m[K^~[m[K
+[01m[Kwinwidget.c:893:17:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ki[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  893 |         int di, [01;35m[Ki[m[K;
+      |                 [01;35m[K^[m[K
+[01m[Kwinwidget.c:893:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kdi[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  893 |         int [01;35m[Kdi[m[K, i;
+      |             [01;35m[K^~[m[K
+[01m[Kwinwidget.c:887:29:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kpy[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  887 |         int tc_x, tc_y, px, [01;35m[Kpy[m[K;
+      |                             [01;35m[K^~[m[K
+[01m[Kwinwidget.c:887:25:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kpx[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  887 |         int tc_x, tc_y, [01;35m[Kpx[m[K, py;
+      |                         [01;35m[K^~[m[K
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -O2 -pipe -march=native -flto=4 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DPREFIX=\"/usr\" -DPACKAGE=\"feh\" -DVERSION=\"3.9.1\" -o feh events.o feh_png.o filelist.o gib_hash.o gib_imlib.o gib_list.o gib_style.o imlib.o index.o keyevents.o list.o main.o md5.o menu.o multiwindow.o options.o signals.o slideshow.o thumbnail.o timers.o utils.o wallpaper.o winwidget.o -lm -lpng -lX11 -lImlib2
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans1.ltrans.o: in function `feh_menu_calc_size':
+<artificial>:(.text+0xea5): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0xeac): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0xebe): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1090): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans1.ltrans.o: in function `feh_menu_redraw.part.0':
+<artificial>:(.text+0x12b8): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1393): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1499): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x14a0): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x14c1): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans1.ltrans.o: in function `feh_thumbnail_mark_removed':
+<artificial>:(.text+0x1fb9): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1fc0): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1fd0): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x2016): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x201d): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x2044): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans1.ltrans.o: in function `feh_parse_option_array':
+<artificial>:(.text+0x69f5): undefined reference to `imlib_add_path_to_font_path'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans1.ltrans.o: in function `feh_wm_set_bg':
+<artificial>:(.text+0x74b7): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7aa6): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7c26): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7ce3): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x813e): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans1.ltrans.o:<artificial>:(.text+0x8275): more undefined references to `imlib_context_set_angle' follow
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans1.ltrans.o: in function `init_thumbnail_mode':
+<artificial>:(.text+0xa01c): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0xa023): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0xa039): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0xa096): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0xa09d): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0xa0c6): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0xa448): undefined reference to `imlib_load_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans1.ltrans.o: in function `main':
+<artificial>:(.text.startup+0x2cf): undefined reference to `imlib_add_path_to_font_path'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text.startup+0x2db): undefined reference to `imlib_add_path_to_font_path'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans0.ltrans.o: in function `gib_imlib_load_font':
+<artificial>:(.text+0x1ed5): undefined reference to `imlib_load_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1ef7): undefined reference to `imlib_load_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans0.ltrans.o: in function `feh_draw_filename':
+<artificial>:(.text+0x3a24): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3a2b): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3a3d): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3ac8): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3acf): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3af1): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3b12): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3b19): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3b44): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3b6c): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3b73): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3b93): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3baf): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3bb6): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3bdf): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3c1f): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3d4c): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3d53): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3d62): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans0.ltrans.o: in function `feh_draw_info':
+<artificial>:(.text+0x3f0d): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3f14): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3f24): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x403c): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x4043): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x4065): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x4084): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x408b): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x40b5): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x410a): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans0.ltrans.o: in function `feh_draw_caption':
+<artificial>:(.text+0x4448): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans0.ltrans.o: in function `feh_draw_actions':
+<artificial>:(.text+0x784a): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7851): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7872): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x78c4): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x78cb): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x78db): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x796c): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7973): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7999): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x79b0): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x79b7): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x79e9): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7aa0): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7aa7): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7ac9): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7ae2): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7ae9): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7b14): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7b70): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans0.ltrans.o: in function `get_index_string_dim':
+<artificial>:(.text+0x7c97): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7c9e): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x7cae): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans0.ltrans.o: in function `init_index_mode':
+<artificial>:(.text+0x8312): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x85c3): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x8a8a): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x8a91): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x8aa3): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x8aee): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x8af5): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x8b1a): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans0.ltrans.o: in function `gib_imlib_load_font':
+<artificial>:(.text+0x1f15): undefined reference to `imlib_load_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans2.ltrans.o: in function `feh_create_checks':
+<artificial>:(.text+0x273): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans2.ltrans.o: in function `gib_imlib_text_draw.constprop.0':
+<artificial>:(.text+0x43a): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x441): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x4b4): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans2.ltrans.o: in function `gib_imlib_get_text_size.constprop.0':
+<artificial>:(.text+0x547): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x54e): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x55c): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans2.ltrans.o: in function `winwidget_render_image':
+<artificial>:(.text+0x11c0): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x12a6): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x12ad): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x12bf): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1311): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1318): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x133a): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1355): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x135c): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1381): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x13d2): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x150c): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1513): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1525): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1575): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x157c): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x159e): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x15b5): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x15bc): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x15e7): undefined reference to `imlib_text_draw'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x1627): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x16cc): undefined reference to `imlib_context_set_angle'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans2.ltrans.o: in function `feh_wrap_string.constprop.0':
+<artificial>:(.text+0x35b9): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x35c0): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x35d3): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x35db): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x35e2): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x35f5): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x3698): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x369f): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x36b1): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x379b): undefined reference to `imlib_context_set_font'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x37a2): undefined reference to `imlib_context_set_direction'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: <artificial>:(.text+0x37b4): undefined reference to `imlib_get_text_size'
+/usr/lib/gcc/x86_64-pc-linux-gnu/12/../../../../x86_64-pc-linux-gnu/bin/ld: /var/tmp/portage/media-gfx/feh-3.9.1/temp/ccbXFuaw.ltrans2.ltrans.o: in function `gib_imlib_text_draw.constprop.0':
+<artificial>:(.text+0x52b): undefined reference to `imlib_text_draw'
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:45: feh] Error 1
+make[1]: Leaving directory '/var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1/src'
+make: *** [Makefile:6: build-src] Error 2
+ [31;01m*[0m ERROR: media-gfx/feh-3.9.1::gentoo failed (compile phase):
+ [31;01m*[0m   emake failed
+ [31;01m*[0m 
+ [31;01m*[0m If you need support, post the output of `emerge --info '=media-gfx/feh-3.9.1::gentoo'`,
+ [31;01m*[0m the complete build log and the output of `emerge -pqv '=media-gfx/feh-3.9.1::gentoo'`.
+ [31;01m*[0m The complete build log is located at '/var/tmp/portage/media-gfx/feh-3.9.1/temp/build.log'.
+ [31;01m*[0m The ebuild environment file is located at '/var/tmp/portage/media-gfx/feh-3.9.1/temp/environment'.
+ [31;01m*[0m Working directory: '/var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1'
+ [31;01m*[0m S: '/var/tmp/portage/media-gfx/feh-3.9.1/work/feh-3.9.1'
