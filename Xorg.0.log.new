@@ -1,0 +1,213 @@
+[   220.160] 
+X.Org X Server 1.21.1.7
+X Protocol Version 11, Revision 0
+[   220.162] Current Operating System: Linux GentooPC 6.2.8-gentoo #1 SMP Thu Mar 23 02:32:38 EET 2023 x86_64
+[   220.162] Kernel command line: BOOT_IMAGE=/vmlinuz-6.2.8-gentoo root=PARTUUID=bf4f2899-01af-f748-ba8d-72b44b1ed0eb ro
+[   220.163]  
+[   220.164] Current version of pixman: 0.42.2
+[   220.165] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[   220.165] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[   220.167] (==) Log file: "/home/stefan/.local/share/xorg/Xorg.0.log", Time: Sat Mar 25 21:07:28 2023
+[   220.167] (==) Using config file: "/etc/X11/xorg.conf"
+[   220.168] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[   220.168] (==) ServerLayout "Layout0"
+[   220.168] (**) |-->Screen "Screen0" (0)
+[   220.168] (**) |   |-->Monitor "Monitor0"
+[   220.168] (**) |   |-->Device "Device0"
+[   220.168] (**) |-->Input Device "Keyboard0"
+[   220.168] (**) |-->Input Device "Mouse0"
+[   220.168] (**) Option "Xinerama" "0"
+[   220.168] (==) Not automatically adding devices
+[   220.168] (==) Not automatically enabling devices
+[   220.168] (==) Not automatically adding GPU devices
+[   220.168] (==) Automatically binding GPU devices
+[   220.168] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[   220.168] (WW) The directory "/usr/share/fonts/TTF" does not exist.
+[   220.168] 	Entry deleted from font path.
+[   220.168] (==) FontPath set to:
+	/usr/share/fonts/misc,
+	/usr/share/fonts/OTF,
+	/usr/share/fonts/Type1,
+	/usr/share/fonts/100dpi,
+	/usr/share/fonts/75dpi
+[   220.168] (==) ModulePath set to "/usr/lib64/xorg/modules"
+[   220.168] (II) Module ABI versions:
+[   220.168] 	X.Org ANSI C Emulation: 0.4
+[   220.168] 	X.Org Video Driver: 25.2
+[   220.168] 	X.Org XInput driver : 24.4
+[   220.168] 	X.Org Server Extension : 10.0
+[   220.169] (--) PCI:*(1@0:0:0) 10de:1c81:10de:1c81 rev 161, Mem @ 0xf6000000/16777216, 0xe0000000/268435456, 0xf0000000/33554432, I/O @ 0x0000e000/128, BIOS @ 0x????????/131072
+[   220.169] (II) LoadModule: "glx"
+[   220.169] (II) Loading /usr/lib64/xorg/modules/extensions/libglx.so
+[   220.169] (II) Module glx: vendor="X.Org Foundation"
+[   220.169] 	compiled for 1.21.1.7, module version = 1.0.0
+[   220.169] 	ABI class: X.Org Server Extension, version 10.0
+[   220.169] (II) LoadModule: "nvidia"
+[   220.169] (II) Loading /usr/lib64/xorg/modules/drivers/nvidia_drv.so
+[   220.169] (II) Module nvidia: vendor="NVIDIA Corporation"
+[   220.169] 	compiled for 1.6.99.901, module version = 1.0.0
+[   220.169] 	Module class: X.Org Video Driver
+[   220.169] (II) LoadModule: "kbd"
+[   220.169] (II) Loading /usr/lib64/xorg/modules/input/kbd_drv.so
+[   220.170] (II) Module kbd: vendor="X.Org Foundation"
+[   220.170] 	compiled for 1.21.1.7, module version = 1.9.0
+[   220.170] 	Module class: X.Org XInput Driver
+[   220.170] 	ABI class: X.Org XInput driver, version 24.4
+[   220.170] (II) LoadModule: "mouse"
+[   220.170] (II) Loading /usr/lib64/xorg/modules/input/mouse_drv.so
+[   220.170] (II) Module mouse: vendor="X.Org Foundation"
+[   220.170] 	compiled for 1.21.1.7, module version = 1.9.3
+[   220.170] 	Module class: X.Org XInput Driver
+[   220.170] 	ABI class: X.Org XInput driver, version 24.4
+[   220.170] (II) NVIDIA dlloader X Driver  530.41.03  Thu Mar 16 19:25:45 UTC 2023
+[   220.170] (II) NVIDIA Unified Driver for all Supported NVIDIA GPUs
+[   220.170] (--) using VT number 7
+
+[   220.171] (II) Loading sub module "fb"
+[   220.171] (II) LoadModule: "fb"
+[   220.171] (II) Module "fb" already built-in
+[   220.171] (II) Loading sub module "wfb"
+[   220.171] (II) LoadModule: "wfb"
+[   220.171] (II) Loading /usr/lib64/xorg/modules/libwfb.so
+[   220.171] (II) Module wfb: vendor="X.Org Foundation"
+[   220.171] 	compiled for 1.21.1.7, module version = 1.0.0
+[   220.171] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[   220.171] (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
+[   220.171] (**) NVIDIA(0): Depth 24, (--) framebuffer bpp 32
+[   220.171] (==) NVIDIA(0): RGB weight 888
+[   220.171] (==) NVIDIA(0): Default visual is TrueColor
+[   220.171] (==) NVIDIA(0): Using gamma correction (1.0, 1.0, 1.0)
+[   220.171] (**) NVIDIA(0): Option "Stereo" "0"
+[   220.171] (**) NVIDIA(0): Option "nvidiaXineramaInfoOrder" "DFP-1"
+[   220.171] (**) NVIDIA(0): Option "SLI" "Off"
+[   220.171] (**) NVIDIA(0): Option "MultiGPU" "Off"
+[   220.171] (**) NVIDIA(0): Option "BaseMosaic" "off"
+[   220.171] (**) NVIDIA(0): Stereo disabled by request
+[   220.171] (**) NVIDIA(0): NVIDIA SLI disabled.
+[   220.171] (**) NVIDIA(0): NVIDIA Multi-GPU disabled.
+[   220.171] (**) NVIDIA(0): Option "MetaModes" "1920x1080 +0+0 {ForceCompositionPipeline=On}"
+[   220.171] (**) NVIDIA(0): Enabling 2D acceleration
+[   220.171] (II) Loading sub module "glxserver_nvidia"
+[   220.171] (II) LoadModule: "glxserver_nvidia"
+[   220.171] (II) Loading /usr/lib64/xorg/modules/extensions/libglxserver_nvidia.so
+[   220.175] (II) Module glxserver_nvidia: vendor="NVIDIA Corporation"
+[   220.175] 	compiled for 1.6.99.901, module version = 1.0.0
+[   220.175] 	Module class: X.Org Server Extension
+[   220.175] (II) NVIDIA GLX Module  530.41.03  Thu Mar 16 19:27:05 UTC 2023
+[   220.175] (II) NVIDIA: The X server supports PRIME Render Offload.
+[   220.552] (--) NVIDIA(0): Valid display device(s) on GPU-0 at PCI:1:0:0
+[   220.552] (--) NVIDIA(0):     DFP-0
+[   220.552] (--) NVIDIA(0):     DFP-1 (boot)
+[   220.552] (--) NVIDIA(0):     DFP-2
+[   220.552] (--) NVIDIA(0):     DFP-3
+[   220.552] (WW) NVIDIA: No DRM device: No direct render devices found.
+[   220.552] (II) NVIDIA(0): NVIDIA GPU NVIDIA GeForce GTX 1050 (GP107-A) at PCI:1:0:0
+[   220.552] (II) NVIDIA(0):     (GPU-0)
+[   220.552] (--) NVIDIA(0): Memory: 2097152 kBytes
+[   220.552] (--) NVIDIA(0): VideoBIOS: 86.07.39.80.21
+[   220.552] (II) NVIDIA(0): Detected PCI Express Link width: 16X
+[   220.552] (--) NVIDIA(GPU-0): DFP-0: disconnected
+[   220.552] (--) NVIDIA(GPU-0): DFP-0: Internal TMDS
+[   220.552] (--) NVIDIA(GPU-0): DFP-0: 330.0 MHz maximum pixel clock
+[   220.552] (--) NVIDIA(GPU-0): 
+[   220.596] (--) NVIDIA(GPU-0): LG Electronics 32inch LG FHD (DFP-1): connected
+[   220.596] (--) NVIDIA(GPU-0): LG Electronics 32inch LG FHD (DFP-1): Internal TMDS
+[   220.596] (--) NVIDIA(GPU-0): LG Electronics 32inch LG FHD (DFP-1): 600.0 MHz maximum pixel clock
+[   220.596] (--) NVIDIA(GPU-0): 
+[   220.596] (--) NVIDIA(GPU-0): DFP-2: disconnected
+[   220.596] (--) NVIDIA(GPU-0): DFP-2: Internal DisplayPort
+[   220.596] (--) NVIDIA(GPU-0): DFP-2: 1440.0 MHz maximum pixel clock
+[   220.596] (--) NVIDIA(GPU-0): 
+[   220.596] (--) NVIDIA(GPU-0): DFP-3: disconnected
+[   220.596] (--) NVIDIA(GPU-0): DFP-3: Internal TMDS
+[   220.596] (--) NVIDIA(GPU-0): DFP-3: 165.0 MHz maximum pixel clock
+[   220.596] (--) NVIDIA(GPU-0): 
+[   220.599] (II) NVIDIA(0): Validated MetaModes:
+[   220.599] (II) NVIDIA(0):     "1920x1080+0+0{ForceCompositionPipeline=On}"
+[   220.599] (II) NVIDIA(0): Virtual screen size determined to be 1920 x 1080
+[   220.603] (--) NVIDIA(0): DPI set to (69, 70); computed from "UseEdidDpi" X config
+[   220.603] (--) NVIDIA(0):     option
+[   220.603] (WW) NVIDIA: Failed to bind sideband socket to
+[   220.603] (WW) NVIDIA:     '/var/run/nvidia-xdriver-d7c9b5ad' Permission denied
+[   220.603] (II) NVIDIA: Reserving 24576.00 MB of virtual memory for indirect memory
+[   220.603] (II) NVIDIA:     access.
+[   220.604] (II) NVIDIA(0): ACPI: failed to connect to the ACPI event daemon; the daemon
+[   220.604] (II) NVIDIA(0):     may not be running or the "AcpidSocketPath" X
+[   220.604] (II) NVIDIA(0):     configuration option may not be set correctly.  When the
+[   220.604] (II) NVIDIA(0):     ACPI event daemon is available, the NVIDIA X driver will
+[   220.604] (II) NVIDIA(0):     try to use it to receive ACPI event notifications.  For
+[   220.604] (II) NVIDIA(0):     details, please see the "ConnectToAcpid" and
+[   220.604] (II) NVIDIA(0):     "AcpidSocketPath" X configuration options in Appendix B: X
+[   220.604] (II) NVIDIA(0):     Config Options in the README.
+[   220.618] (II) NVIDIA(0): Setting mode "1920x1080+0+0{ForceCompositionPipeline=On}"
+[   220.652] (==) NVIDIA(0): Disabling shared memory pixmaps
+[   220.652] (==) NVIDIA(0): Backing store enabled
+[   220.652] (==) NVIDIA(0): Silken mouse enabled
+[   220.652] (**) NVIDIA(0): DPMS enabled
+[   220.652] (II) Loading sub module "dri2"
+[   220.652] (II) LoadModule: "dri2"
+[   220.652] (II) Module "dri2" already built-in
+[   220.652] (II) NVIDIA(0): [DRI2] Setup complete
+[   220.652] (II) NVIDIA(0): [DRI2]   VDPAU driver: nvidia
+[   220.652] (II) Initializing extension Generic Event Extension
+[   220.652] (II) Initializing extension SHAPE
+[   220.652] (II) Initializing extension MIT-SHM
+[   220.652] (II) Initializing extension XInputExtension
+[   220.652] (II) Initializing extension XTEST
+[   220.652] (II) Initializing extension BIG-REQUESTS
+[   220.652] (II) Initializing extension SYNC
+[   220.652] (II) Initializing extension XKEYBOARD
+[   220.652] (II) Initializing extension XC-MISC
+[   220.652] (II) Initializing extension XFIXES
+[   220.652] (II) Initializing extension RENDER
+[   220.652] (II) Initializing extension RANDR
+[   220.652] (II) Initializing extension COMPOSITE
+[   220.652] (II) Initializing extension DAMAGE
+[   220.652] (II) Initializing extension MIT-SCREEN-SAVER
+[   220.652] (II) Initializing extension DOUBLE-BUFFER
+[   220.652] (II) Initializing extension RECORD
+[   220.652] (II) Initializing extension DPMS
+[   220.652] (II) Initializing extension Present
+[   220.652] (II) Initializing extension DRI3
+[   220.652] (II) Initializing extension X-Resource
+[   220.652] (II) Initializing extension XVideo
+[   220.652] (II) Initializing extension XVideo-MotionCompensation
+[   220.652] (II) Initializing extension GLX
+[   220.652] (II) Initializing extension GLX
+[   220.652] (II) Indirect GLX disabled.
+[   220.652] (II) GLX: Another vendor is already registered for screen 0
+[   220.652] (II) Initializing extension XFree86-VidModeExtension
+[   220.652] (II) Initializing extension XFree86-DGA
+[   220.652] (II) Initializing extension XFree86-DRI
+[   220.652] (II) Initializing extension DRI2
+[   220.652] (II) Initializing extension NV-GLX
+[   220.652] (II) Initializing extension NV-CONTROL
+[   220.652] (II) Initializing extension XINERAMA
+[   220.669] (II) Using input driver 'kbd' for 'Keyboard0'
+[   220.669] (**) Option "CoreKeyboard"
+[   220.669] (**) Keyboard0: always reports core events
+[   220.669] (**) Keyboard0: always reports core events
+[   220.669] (**) Option "Protocol" "standard"
+[   220.669] (**) Option "XkbRules" "base"
+[   220.669] (**) Option "XkbModel" "pc105"
+[   220.669] (**) Option "XkbLayout" "us"
+[   220.669] (II) XINPUT: Adding extended input device "Keyboard0" (type: KEYBOARD, id 6)
+[   220.669] (II) Using input driver 'mouse' for 'Mouse0'
+[   220.669] (**) Option "CorePointer"
+[   220.669] (**) Mouse0: always reports core events
+[   220.669] (**) Option "Protocol" "auto"
+[   220.669] (**) Option "Device" "/dev/input/mice"
+[   220.669] (II) Mouse0: Setting mouse protocol to "ExplorerPS/2"
+[   220.669] (**) Mouse0: Protocol: "ExplorerPS/2"
+[   220.669] (**) Mouse0: always reports core events
+[   220.669] (EE) xf86OpenSerial: Cannot open device /dev/input/mice
+	Permission denied.
+[   220.669] (EE) Mouse0: cannot open input device
+[   220.669] (EE) PreInit returned 2 for "Mouse0"
+[   220.669] (II) UnloadModule: "mouse"
+[   329.297] (II) UnloadModule: "kbd"
+[   329.451] (II) NVIDIA(GPU-0): Deleting GPU-0
+[   329.453] (II) Server terminated successfully (0). Closing log file.
